@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Practice - Restaurant Vocabulary</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f9; }
+    h2 { color: #333; }
+    .btn { display: block; width: 200px; margin: 10px 0; padding: 10px; background: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; transition: background 0.3s; }
+    .btn:hover { background: #45a049; }
+    #feedback { margin-top: 20px; font-size: 18px; }
+  </style>
+</head>
+<body>
+
+  <h2>🍽️ 选择正确的英文单词：</h2>
+  <p><strong>图片描述：</strong> 一套餐具：盘子、刀叉</p>
+
+  <button class="btn" onclick="checkAnswer('Plate')">Plate</button>
+  <button class="btn" onclick="checkAnswer('Knife')">Knife</button>
+  <button class="btn" onclick="checkAnswer('Fork')">Fork</button>
+  <button class="btn" onclick="checkAnswer('Tableware')">Tableware</button>
+
+  <div id="feedback"></div>
+
+  <script>
+    function checkAnswer(answer) {
+      const correct = 'Tableware';
+      const feedback = document.getElementById('feedback');
+      if (answer === correct) {
+        feedback.innerHTML = '✅ 正确！Tableware 是“餐具”的意思。';
+        feedback.style.color = 'green';
+      } else {
+        feedback.innerHTML = `❌ 不正确。正确答案是 Tableware。`;
+        feedback.style.color = 'red';
+      }
+    }
+  </script>
+
+</body>
+</html>
